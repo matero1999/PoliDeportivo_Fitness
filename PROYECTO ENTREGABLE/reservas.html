@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reservas de pistas</title>
+  <!-- CSS de Bootstrap 5 -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://kit.fontawesome.com/f3b26cb74c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">PoliDeportivo Fitness</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="actividades.html">Actividades</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reservas.html">Reservas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Sobre Nosotros</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container mt-4" id="reservasPista">
+        <h1>Bienvenido a nuestro sistema de reservas</h1>
+        <p>Aquí podrás reservar pistas de cualquier deporte para jugar con tus amigos.</p>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationNombre" required>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, introduzca su nombre.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationApellido" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="validationApellido" required>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, introduzca sus apellidos.
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <label for="validationDni" class="form-label">DNI</label>
+            <input type="text" class="form-control" id="validationDni" required>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, introduzca su dni.
+            </div>
+            
+          </div>
+          <div class="col-md-3">
+            <label for="SelectDeporte" class="form-label">Seleccionar deporte</label>
+            <select id="SelectDeporte" class="form-select" required>
+              <option selected disabled value="">Elegir...</option>
+              <option>Fútbol 7</option>
+              <option>Fútbol Sala</option>
+              <option>Tenis</option>
+              <option>Pádel</option>
+              <option>Natación</option>
+              <option>Gimnasio</option>
+            </select>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, seleccione un deporte.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="fechaReserva" class="form-label">Fecha de la Reserva</label>
+            <input type="datetime-local" id="fechaReserva" required>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, seleccione la fecha de reserva.
+            </div>
+
+          </div>
+
+          <div class="col-md-3">
+            <label for="validationNumero" class="form-label">Número de Teléfono</label>
+            <input type="number" class="form-control" id="validationNumero" required>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, introduzca un número de teléfono.
+            </div>
+          </div>
+
+            <div class="col-md-3">
+              <label for="validationPostal" class="form-label">Código Postal</label>
+              <input type="number" class="form-control" id="validationPostal" required>
+              <div class="valid-feedback">
+                Bien hecho!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, introduzca su código postal.
+              </div>
+            </div>
+          
+
+          <div class="col-md-6">
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+            <div class="valid-feedback">
+              Bien hecho!
+            </div>
+            <div class="invalid-feedback">
+              Por favor, introduzca su correo electrónico.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+              <label class="form-check-label" for="exampleCheck1">De acuerdo con los términos y condiciones</label>
+
+              <div class="invalid-feedback">
+                Debes estar de acuerdo para enviar.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+        <!-- Aquí puedes añadir más contenido HTML -->
+      </div>
+      <script>
+        (() => {
+          'use strict'
+        
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+          
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              
+              if (!form.checkValidity()) {
+                
+                event.preventDefault()
+                event.stopPropagation()
+              }else{
+                window.alert("Su reserva se ha realizado correctamente.")
+              }
+              
+              form.classList.add('was-validated')
+            }, false)
+          })
+          
+        })()
+      </script>
+
+
+</body>

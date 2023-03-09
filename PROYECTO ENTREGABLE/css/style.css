@@ -1,0 +1,49 @@
+img.w-100{
+    border-radius: 5%;
+  }
+
+.imgPoliDeportivo{
+  padding: 0%;
+  margin: 0%;
+}
+#centroDeportivo{
+  background-image: url("edificio.webp");
+  background-size: cover;
+  height: 300px;
+  background-position: center;
+}
+.col-sm-12{
+  margin-bottom: 3%;
+  
+}
+
+.deportes{
+  position: relative;
+}
+
+.textoDeportes{
+  position: absolute; 
+  top: 10px; 
+  left: 40px;
+  font-size: 30px;
+  color: white;
+}
+
+.fa-brands {
+  font-size: 40px;
+  color: #3B5998;
+  
+}
+@media screen and (min-width: 368px) {
+  .ocultar-div{
+      display:none;
+  }
+
+}
+@media screen and (max-width: 368px) {
+  .nav-principal{
+    display: none;
+  }
+}
+
+
