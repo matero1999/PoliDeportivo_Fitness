@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PoliDeportivo Fitness</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+    <!-- Tu JavaScript personalizado -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/f3b26cb74c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav-principal">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: white;">PoliDeportivo Fitness</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse position-absolute top-50 start-50 translate-middle" id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="actividades.html" style="color: white;">Actividades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reservas.html" style="color: white;">Reservas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#nosotros" style="color: white;">Sobre Nosotros</a>
+                </li>
+              </ul>
+              
+            </div>
+            <form class="d-flex position-absolute end-0" role="search" action="login.html" id="navbarNav" style="margin-right: 7%;">
+              <button class="btn btn-outline-success" type="submit">Iniciar Sesión</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      
+      
+        <!-- Barra de navegación para ancho de pantalla inferior a 384px (tamaño de pantalla de móvil) -->
+        <div class=" ocultar-div ">
+          <nav class="navbar bg-dark">
+            <div class="container-fluid ">
+              <a class="navbar-brand"  href="index.html" style="color: white;">PoliDeportivo Fitness</a>
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PoliDeportivo Fitness</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="actividades.html" >Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="reservas.html" >Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#nosotros" >Sobre Nosotros</a>
+                    </li>
+                    
+                  </ul>
+                  <form class="d-flex mt-3" role="search" action="index.html">
+                    <button class="btn btn-outline-success" type="submit">Iniciar Sesión</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      
+
+
+
+        <div class="container mt-5 " id="login">
+            <h1 class="text-center">LOGIN</h1>
+            <div class="container" style="width: 30%;">
+            <form class=" needs-validation" novalidate action="index.html">
+                
+                <label for="validationUsuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="validationUsuario" required>
+                <div class="valid-feedback">
+                  Bien hecho!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, introduzca su usuario.
+                </div>
+              
+              
+                <label for="validationPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="validationPassword" required>
+                <div class="valid-feedback">
+                  Bien hecho!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, introduzca su contraseña.
+                </div>
+    
+                <br>
+                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    
+            </div>
+            </form>
+            <!-- Aquí puedes añadir más contenido HTML -->
+          </div>
+          <script>
+            (() => {
+              'use strict'
+            
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              const forms = document.querySelectorAll('.needs-validation')
+              
+              // Loop over them and prevent submission
+              Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                  
+                  if (!form.checkValidity()) {
+                    
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }else{
+                    
+                    window.alert("Se ha logueado correctamente.")
+                  }
+                  
+                  form.classList.add('was-validated')
+                }, false)
+              })
+              
+            })()
+          </script>
+      
+</body>
+</html>

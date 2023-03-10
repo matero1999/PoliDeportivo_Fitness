@@ -1,17 +1,21 @@
-img.w-100{
+img.h-100{
     border-radius: 5%;
   }
-
+.carousel-inner{
+  
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+  
+}
 .imgPoliDeportivo{
   padding: 0%;
   margin: 0%;
 }
-#centroDeportivo{
-  background-image: url("edificio.webp");
-  background-size: cover;
-  height: 300px;
-  background-position: center;
-}
+
 .col-sm-12{
   margin-bottom: 3%;
   
@@ -34,13 +38,13 @@ img.w-100{
   color: #3B5998;
   
 }
-@media screen and (min-width: 368px) {
+@media screen and (min-width: 991px) {
   .ocultar-div{
       display:none;
   }
 
 }
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 991px) {
   .nav-principal{
     display: none;
   }
