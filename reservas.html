@@ -125,6 +125,7 @@
       <div class="col-md-3">
         <label for="SelectDeporte" class="form-label">Seleccionar deporte</label>
         <select id="SelectDeporte" class="form-select" onchange="showInp()">
+          
           <option>Fútbol 7</option>
           <option>Fútbol Sala</option>
           <option>Tenis</option>
@@ -188,7 +189,7 @@
 
       <div class="col-12">
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck2" style="display: none;" required>
+          <input type="checkbox" class="form-check-input" id="exampleCheck2" style="display: none;" required="false">
           <label class="form-check-label" for="exampleCheck2" id="labelExampleCheck2" style="display: none;">¿Has
             iniciado sesión?</label>
 
@@ -298,7 +299,7 @@
       if (getSelectValue == "Natación" || getSelectValue == "Gimnasio") {
         document.getElementById("exampleCheck2").style.display = "inline-block";
         document.getElementById("labelExampleCheck2").style.display = "inline-block";
-        document.getElementById("exampleCheck2").attributes.add = "required";
+        document.getElementById("exampleCheck2").required = "true";
 
       } else {
         document.getElementById("exampleCheck2").style.display = "none";
