@@ -12,15 +12,16 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/bootstrap.bundle.js"></script>
   <script src="https://kit.fontawesome.com/f3b26cb74c.js" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
-  <!-- Barra de navegación para ancho de pantalla superior a 384px (tamaño de pantalla de móvil) -->
+  <!-- Barra de navegación para ancho de pantalla superior a 991px (tamaño de pantalla de móvil) -->
   <div class="nav-principal">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html" style="width: 10%;margin-left: 5%;">PoliDeportivo Fitness
-          <img src="img/icono-nav-bueno.webp" style="width: 40%;">
+          <img src="img/icono-nav-bueno.webp" style="width: 40%;" alt="Imagen Logo Empresa">
         </a>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +50,7 @@
   </div>
 
 
-  <!-- Barra de navegación para ancho de pantalla inferior a 384px (tamaño de pantalla de móvil) -->
+  <!-- Barra de navegación para ancho de pantalla inferior a 991px (tamaño de pantalla de móvil) -->
   <div class=" ocultar-div ">
     <nav class="navbar bg-dark">
       <div class="container-fluid ">
@@ -86,7 +87,7 @@
   </div>
 
 
-  <div class="container mt-4" id="reservasPista">
+  <div class="container mt-4" id="reservasPista" style="margin-bottom: 1%;">
     <h1>Bienvenido a nuestro sistema de reservas</h1>
     <p>Aquí podrás reservar pistas de cualquier deporte para jugar con tus amigos.</p>
     <form class="row g-3 needs-validation" novalidate>
@@ -125,7 +126,6 @@
       <div class="col-md-3">
         <label for="SelectDeporte" class="form-label">Seleccionar deporte</label>
         <select id="SelectDeporte" class="form-select" onchange="showInp()">
-          <option selected disabled value="">Elegir...</option>
           <option>Fútbol 7</option>
           <option>Fútbol Sala</option>
           <option>Tenis</option>
@@ -214,7 +214,6 @@
         <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
     </form>
-    <!-- Aquí puedes añadir más contenido HTML -->
   </div>
   <br>
   <br>
@@ -274,8 +273,6 @@
     </div>
   </footer>
 
-
-
   <script>
     (() => {
       'use strict'
@@ -317,6 +314,8 @@
     }
 
   </script>
+
+  
 
 
 </body>
